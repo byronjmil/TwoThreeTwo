@@ -1,7 +1,7 @@
 <template>
   <v-container class="fill-height">
     <v-responsive class="align-centerfill-height mx-auto" max-width="900">
-      <div class="text-h5 text-center">Last Update: September 29, 2024</div>
+      <div class="text-h5 text-center">Last Update: October 4, 2024</div>
       <v-carousel hide-delimiters>
         <v-carousel-item v-for="number in numbersArray" :key="number" :src="images[number]"
           alt="35mm Photo"></v-carousel-item>
@@ -13,7 +13,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-const numberOfImages = 124;
+const numberOfImages = 134;
 const uInt8Array = new Uint8Array(numberOfImages);
 window.crypto.getRandomValues(uInt8Array);
 const numbersArray = Array.from({ length: numberOfImages }, (_, i) => i);
