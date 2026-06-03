@@ -14,9 +14,9 @@
 <script setup>
 const items = [
   {
-    title: 'iam@byronjmil.com',
+    title: 'alabamabyron@icloud.com',
     icon: 'mdi-email',
-    href: 'mailto:iam@byronjmil.com',
+    href: 'mailto:alabamabyron@icloud.com',
   },
 ]
 </script>
