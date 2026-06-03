@@ -116,7 +116,7 @@ const parisImages = ref({});
 const bostonImages = ref({});
 const majimaImages = ref({});
 
-onMounted(async () => {
+(async () => {
   const usaImagePromises = usaNumbersArray.map(async (number) => {
     try {
       const image = await import(`@/assets/images/usa/${number}.jpeg`);
@@ -150,11 +150,11 @@ onMounted(async () => {
     }
   });
 
-  await Promise.all(usaImagePromises); // Wait for all images to load
-  await Promise.all(parisImagePromises); // Wait for all images to load
-  await Promise.all(bostonImagePromises); // Wait for all images to load
   await Promise.all(majimaImagePromises); // Wait for all images to load
-});
+  Promise.all(bostonImagePromises); // Wait for all images to load
+  Promise.all(parisImagePromises); // Wait for all images to load
+  Promise.all(usaImagePromises); // Wait for all images to load
+})();
 
 const tab = ref('Cities');
 
