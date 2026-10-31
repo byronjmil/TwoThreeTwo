@@ -44,7 +44,7 @@
         <v-tabs-window-item value="maJ-Mil!">
           <v-container class="fill-height">
             <v-responsive class="align-centerfill-height mx-auto" max-width="900">
-              <div class="text-h5 text-center">Last Update: June 3, 2026</div>
+              <div class="text-h5 text-center">Last Update: October 31, 2026</div>
               <div class="text-h6 text-center">Number of Photos: {{ numberOfMajimaImages }}</div>
               <v-carousel hide-delimiters>
                 <v-carousel-item v-for="number in majimaNumbersArray" :key="number" :src="majimaImages[number]"
@@ -64,7 +64,7 @@ import { ref, onMounted } from 'vue';
 const numberOfUSAImages = 188;
 const numberOfParisImages = 53;
 const numberOfBostonImages = 5;
-const numberOfMajimaImages = 5;
+const numberOfMajimaImages = 8;
 
 const uInt8ArrayUSA = new Uint8Array(numberOfUSAImages);
 const uInt8ArrayParis = new Uint8Array(numberOfParisImages);
@@ -105,7 +105,7 @@ for (let i = 0; i < numberOfBostonImages; i += 1) {
 
 // Shuffle the majimaNumbersArray
 for (let i = 0; i < numberOfMajimaImages; i += 1) {
-  let swapIndex = uInt8ArrayBoston[i] % numberOfMajimaImages;
+  let swapIndex = uInt8ArrayMajima[i] % numberOfMajimaImages;
   let swapValue = majimaNumbersArray[swapIndex];
   majimaNumbersArray[swapIndex] = majimaNumbersArray[i];
   majimaNumbersArray[i] = swapValue;
